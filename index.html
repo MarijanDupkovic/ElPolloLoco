@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/7_statusbars/3_icons/icon_salsa_bottle.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="./models/drawable-Object.class.js"></script>
+    <script src="./models/start-screen.class.js"></script>
+
+    <script src="./models/moveable-Object.class.js"></script>
+    <script src="./models/chicken.class.js"></script>
+    <script src="./models/mini-chicken.class.js"></script>
+
+    <script src="./models/character.class.js"></script>
+
+    <script src="./models/cloud.class.js"></script>
+
+    <script src="./models/status-bar.class.js"></script>
+    <script src="./models/characterStatusBar.class.js"></script>
+    <script src="./models/coinStatusBar.class.js"></script>
+
+    <script src="./models/bottleStatusBar.class.js"></script>
+
+    <script src="./models/world.class.js"></script>
+
+    <script src="./models/background-object.class.js"></script>
+
+    <script src="./models/keyboard.class.js"></script>
+
+    <script src="./models/level.class.js"></script>
+    <script src="./models/endboss.class.js"></script>
+
+    <script src="./models/throwable-object.class.js"></script>
+    <script src="./models/pickable-object.class.js"></script>
+    <script src="./models/bottle.class.js"></script>
+    <script src="./models/coin.class.js"></script>
+    <script src="./models/game-over-screen.class.js"></script>
+
+    <script src="./levels/level1.js"></script>
+
+    <script src="./js/game.js"></script>
+    
+    <title>El pollo loco</title>
+</head>
+
+<body onload="init()">
+    <h1>El pollo loco</h1>
+    <canvas width="720" height="480" id="canvas" class="d-none"></canvas>
+    <div id="command-container" class="d-none commands">
+        <div class="headline"><h3>Commands</h3> <span id="backButton" class="getBack"></span> </div>
+
+        
+        <div class="command-line">Move Left: <div class="keys"><</div> </div>
+        <div class="command-line">Move Right: <div class="keys">></div> </div>
+        <div class="command-line">Jump: <div class="keySpace">SPACE</div></div>
+        <div class="command-line">Throw bottle: <div class="keys">D</div></div>
+    </div>
+    <div id="rotate" class="rotate">
+        <img src="./img/rotate.gif">
+    </div>
+    <div id="startScreen" class="start-screen">
+        <button onclick="world.startGame()" class="start-button">Start</button>
+       
+    </div>
+    <button class="d-none restart-button" id="restartButton">Back to Menu</button>
+    <div style="display: flex; width: 200px; justify-content: space-between;" id="settings">
+        <div class="smartphoneBtns">
+            <div style="margin-left: 20px;">
+                <div id="btnLeft" class="gameBtns">L</div>
+                <div id="btnRight" class="gameBtns">R</div>
+            </div>
+            <div style="margin-right: 20px;">
+                <div id="btnJump" class="gameBtns">J</div>
+                <div id="btnThrow" class="gameBtns">A</div>
+            </div>
+        </div>
+        <div id="audioButton" class="audio-button"></div>
+        <div id="commandButton" class="command-button">i</div>
+    </div>
+
+</body>
+
+</html>
